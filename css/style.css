@@ -1,0 +1,280 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 6.25rem;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f2f2f2;
+    padding: 1rem 6%;
+}
+
+header nav {
+    display: block;
+}
+
+.logo img {
+    width: 7rem;
+    height: auto;
+}
+
+.navlist {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navlist li {
+    position: relative;
+    padding: 0.625rem 2rem;
+}
+
+.main-link {
+    color: #333333;
+    font-weight: 500;
+    font-size: 1.25rem;
+    padding: 0;
+}
+
+.main-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0.1875rem;
+    margin-top: 0.1875rem;
+    background: #ff5a05;
+    transition: width .3s;
+}
+
+.main-link:hover {
+    color: #ff5a05;
+}
+
+.main-link:hover::after {
+    width: 100%;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center;
+ 
+}
+
+h2 {
+    font-size: 1.75rem;
+    font-weight: 500;
+    line-height: 1.5;
+
+}
+
+h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.5;
+   
+}
+
+p {
+    font-size: 1.15rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.container {
+    display: grid;
+    padding: 1rem 6%;
+}
+
+.container h1 {
+    margin-top: 1rem;
+}
+
+.grid-container {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    display: grid;
+    justify-items: start;
+}
+
+.grid-container h3 {
+    text-align: center;
+}
+
+.grid-container img {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.article {
+    margin-top: 1.5rem;
+}
+
+.resource {
+    margin-top: 1rem;
+    font-style: italic;
+    font-size: 1rem;
+}
+
+.portfolio-container{
+    display: grid;
+    
+    grid-gap: 2rem;
+    align-items: center;
+    justify-items: center;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+.card {
+    margin-bottom: 2rem;
+}
+
+.card img {
+    max-width: 400px;
+}
+
+figcaption{
+    font-size: 1.15rem;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+footer {
+    background: #333333;
+    padding: 1rem 6%;
+    height: auto;
+}
+
+.copyright {
+    color: #f2f2f2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.copyright p {
+    font-size: 0.875rem;
+    font-weight: 400;
+    font-family: 'Open sans', sans-serif;
+}
+
+.icon a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #f2f2f2;
+    width: 35px;
+    height: 35px;
+    margin: 0 5px;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    color: #333333;
+    transition: all .40s;
+}
+
+.icon a:hover {
+    transform: translateY(-5px)
+}
+
+
+@media only screen and (min-width: 35rem) {
+    
+    .copyright {
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .copyright p {
+        margin-bottom: 0;
+    }
+
+}
+
+
+@media only screen and (min-width: 53rem) {
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.15rem;
+    }
+
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 2rem;
+    }
+
+    .grid-container h3 {
+        grid-column: 1 / span 3;
+        grid-row: 1/2;
+        justify-items: start;
+    }
+
+    .grid-container img {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        padding: 0.5rem;
+        justify-items: center;
+    } 
+
+    .grid-container .box {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+
+    .portfolio-container {
+        grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+    }
+
+}
+
+@media only screen and (min-width: 72.5rem) {
+
+    p {
+        font-size: 1.15rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+}
+
+@media only screen and (min-width: 80rem) {
+
+    .main-content {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+}
+
